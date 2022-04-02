@@ -10,9 +10,9 @@
 ## Анализ факторов, определяющих успешность игр
 
 Выявление закономерностей, определяющих успешность игры, как основа для планирования кампании на 2017 год.
-`pandas` `numpy` `matplotlib` `scipy` `seaborn` 
+<br>`pandas` `numpy` `matplotlib` `scipy` `seaborn` 
 
 ## Отток клиентов банка
 
 В проекте осуществляется прогноз оттокка клиентов банка на основе информации о 10 тысячах клиентов банка с целью определения дальнейшей стратегии компании.
-`pandas` `scikit-learn` `matplotlib` `scipy` `seaborn` `warnings` `itertools`
+<br>`pandas` `scikit-learn` `matplotlib` `scipy` `seaborn` `warnings` `itertools`
