@@ -12,15 +12,12 @@
 
 - Построен прогноз оттока клиентов с заданной точностью
 
+**Инструменты**
+
+- Язык - `Python`
+- `pandas` `matplotlib` `seaborn` `scikit-learn` `warnings` `itertools`
+
 **Статус**
 
 `Завершен`
 
-**Использованные библиотеки**
-
-- pandas - 0.25.1
-- matplotlib - 3.1.0
-- seaborn - 0.11.2
-- scikit-learn - 0.21.2
-- warnings
-- itertools
