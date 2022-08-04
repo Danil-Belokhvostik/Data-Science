@@ -23,7 +23,7 @@ joblib_file = "joblib_cbc.pkl"
 # joblib_file = 'https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
 
 
-
+@st.cache
 # Функция для загрузки данных
 def load_data():
     uploaded_file = st.file_uploader(label='Выберите данные для классификации', type=['csv'])
