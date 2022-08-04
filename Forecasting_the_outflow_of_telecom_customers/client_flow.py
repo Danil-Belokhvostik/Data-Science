@@ -13,13 +13,13 @@ st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 # img = Image.open("https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg")
 # st.image(img, width = 200 )
 # st.image('https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg')
-image = Image.open('img.png')
-st.image(image)
+#image = Image.open('img.png')
+#st.image(image)
 st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
 # joblib_file = 'joblib_cbc.pkl'
-# joblib_file = 'https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
+joblib_file = r'https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
 
 # Функция для загрузки данных
 def load_data():
