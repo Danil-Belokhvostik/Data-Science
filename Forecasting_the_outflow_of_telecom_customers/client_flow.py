@@ -24,7 +24,7 @@ st.title('Прогноз оттока клиентов')
 # joblib_file = 'joblib_cbc.pkl'
 
 
-
+uploaded_model = st.file_uploader(label='Выберите файл с моделью в формате - .pkl', type=['pkl'])
 # Функция для загрузки данных
 def load_data():
     uploaded_file = st.file_uploader(label='Выберите данные для классификации', type=['csv'])
@@ -50,7 +50,7 @@ if df is not None:
     test = proc.entire_graph(df, delete_features)
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
-    uploaded_model = st.file_uploader(label='Выберите файл с моделью в формате - .pkl', type=['pkl'])
+    
     if uploaded_model is not None:
         joblib_cbc = joblib.load(uploaded_model)
 
