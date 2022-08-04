@@ -2,7 +2,7 @@
 import pandas as pd
 import streamlit as st
 #import joblib
-import pickle
+#import pickle
 from data_preprocessing import Processing
 from PIL import Image
 
@@ -21,7 +21,7 @@ st.title('Прогноз оттока клиентов')
 # Зададим название файла с параметрами модели
 # joblib_file = 'joblib_cbc.pkl'
 # joblib_file = "joblib_cbc.pkl"
-joblib_file = 'joblib_cbc.pkl'
+# joblib_file = 'joblib_cbc.pkl'
 
 
 
@@ -50,8 +50,8 @@ if df is not None:
     test = proc.entire_graph(df, delete_features)
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
-    
-    joblib_cbc = pickle.load(open('price_model.pkl', 'rb'))
+    uploaded_model = st.file_uploader(label='Выберите файл с моделью в формате - .pkl', type=['pkl'])
+    joblib_cbc = pickle.load(uploaded_model)
 
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(test)
