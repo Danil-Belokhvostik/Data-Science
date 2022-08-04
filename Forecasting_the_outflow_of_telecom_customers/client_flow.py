@@ -10,13 +10,13 @@ st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 #image = Image.open('img.png')
 #uploaded_img = st.file_uploader("img",type="jpg")
 #st.open(uploaded_img)
-st.image('img.png')
+st.image(r'img.png')
 
 st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
 # joblib_file = 'joblib_cbc.pkl'
-joblib_file = 'joblib_cbc.pkl'
+joblib_file = r'joblib_cbc.pkl'
 
 # Функция для загрузки данных
 def load_data():
