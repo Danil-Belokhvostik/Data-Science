@@ -16,10 +16,10 @@ st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
 
-joblib_file = 'Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
+#joblib_file = 'Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
 #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
 
-#joblib_file = 'Forecasting_the_outflow_of_telecom_customers/pickle_model.pkl'
+joblib_file = 'Forecasting_the_outflow_of_telecom_customers/pickle_model.pkl'
 #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\pickle_model.pkl'
 
 #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
@@ -46,7 +46,7 @@ def predict(df):
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
 
-    joblib_cbc = joblib.load(joblib_file)
+    joblib_cbc = joblib.load(joblib_file, 'rb')
 
     #joblib_cbc = pickle.load(open(joblib_file, 'rb'))
     # Сделаем предсказание
