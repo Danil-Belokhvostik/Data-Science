@@ -62,6 +62,7 @@ if df is not None:
     results, df_proc = predict(df)
 
     if results is not None:
+        
         st.success("Данные загружены и обрбаботаны")
 
         if st.button('Отобразить данные до преобразования'):
@@ -93,6 +94,5 @@ if df is not None:
             file_name='Результаты классфикации.csv',
             mime='text/csv')
 else:
-    st.error("Если у вас нет нужного исходного файла, попробуйте скачать файл "
-             ".csv с репозитория"
+    st.error("С примером исходного файла можно ознакомиться по ссылке"
              "(https://clck.ru/sUL5Q)")
