@@ -19,7 +19,7 @@ st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
 # joblib_file = 'joblib_cbc.pkl'
-joblib_file = r'https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
+joblib_file = 'https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
 
 # Функция для загрузки данных
 def load_data():
