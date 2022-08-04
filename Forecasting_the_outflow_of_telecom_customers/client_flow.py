@@ -4,7 +4,6 @@ import streamlit as st
 import joblib
 from data_preprocessing import Processing
 from PIL import Image
-import os
 
 # Добавление иконки сайта и изображения
 st.set_page_config(page_icon="🏧", page_title="Client_outflow")
@@ -21,8 +20,7 @@ st.title('Прогноз оттока клиентов')
 # Зададим название файла с параметрами модели
 # joblib_file = 'joblib_cbc.pkl'
 # joblib_file = "joblib_cbc.pkl"
-path = os.path.dirname(__file__)
-joblib_file = path+'/joblib_cbc.pkl'
+joblib_file = '/joblib_cbc.pkl'
 
 
 @st.cache(suppress_st_warning=True)

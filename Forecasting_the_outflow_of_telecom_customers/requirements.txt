@@ -4,4 +4,3 @@ pandas
 Pillow
 streamlit
 data_preprocessing
-os
