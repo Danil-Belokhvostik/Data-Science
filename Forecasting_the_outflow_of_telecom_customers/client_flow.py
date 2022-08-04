@@ -23,7 +23,7 @@ st.title('Прогноз оттока клиентов')
 joblib_file = '/joblib_cbc.pkl'
 
 
-@st.cache(suppress_st_warning=True)
+
 # Функция для загрузки данных
 def load_data():
     uploaded_file = st.file_uploader(label='Выберите данные для классификации', type=['csv'])
