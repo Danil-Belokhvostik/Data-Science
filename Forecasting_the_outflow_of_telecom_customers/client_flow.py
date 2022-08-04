@@ -8,7 +8,11 @@ from PIL import Image
 st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 #image = Image.open(r'c:\Users\Streamlit\Streamlit_client_flow\img.png')
 #st.image('https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg')
-#st.image('img.jpg')
+#
+try:
+    st.image('img.jpg')
+exept:
+    st.image('\img.jpg')
 #st.image(image)
 st.title('Прогноз оттока клиентов')
 
@@ -46,7 +50,7 @@ def predict(df):
     try:
         joblib_cbc = joblib.load(joblib_file)
     except:
-        joblib_cbc = pickle.load(open(joblib_file))
+        joblib_cbc = pickle.load(open(joblib_file, 'rb'))
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(df_proc)
 
