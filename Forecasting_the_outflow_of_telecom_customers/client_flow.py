@@ -46,9 +46,9 @@ def predict(df):
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
 
-    joblib_cbc = joblib.load(joblib_file, 'rb')
+    #joblib_cbc = joblib.load(joblib_file, 'rb')
 
-    #joblib_cbc = pickle.load(open(joblib_file, 'rb'))
+    joblib_cbc = pickle.load(open(joblib_file, 'rb'))
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(df_proc)
 
