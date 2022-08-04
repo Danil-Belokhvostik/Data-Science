@@ -57,23 +57,31 @@ df = load_data()
 
 # Настроим основные кнопки
 if df is not None:
+
+    
     results, df_proc = predict(df)
 
     if results is not None:
+        st.success("Данные загружены и обрбаботаны")
 
         if st.button('Отобразить данные до преобразования'):
             st.dataframe(df)
+
             if st.button('Скрыть данные'):
                 st.dataframe(df)
+
         if st.button('Отобразить данные после преобразования'):
             st.dataframe(df_proc)
+
             if st.button('Скрыть данные'):
                 st.dataframe(df_proc)
+
         if st.button('Показать результаты классфикации'):
             st.markdown('# Результаты классификации')
             st.markdown('- 0 - клиент останется')
             st.markdown('- 1 - расторгнет договор')
             st.dataframe(results)
+
             if st.button('Скрыть результаты'):
                 st.dataframe(results)
 
@@ -84,4 +92,7 @@ if df is not None:
             data=csv,
             file_name='Результаты классфикации.csv',
             mime='text/csv')
-
+else:
+    st.error("Если у вас нет нужного исходного файла, попробуйте скачать файл "
+             ".csv с репозитория"
+             "(https://clck.ru/sUL5Q)")
