@@ -11,7 +11,7 @@ st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 #
 try:
     st.image('img.jpg')
-exept:
+except:
     st.image('\img.jpg')
 #st.image(image)
 st.title('Прогноз оттока клиентов')
