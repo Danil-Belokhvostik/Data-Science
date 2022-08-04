@@ -10,9 +10,9 @@ st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 #st.image('https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg')
 #
 try:
-    st.image('img.jpg')
+    st.image('Forecasting_the_outflow_of_telecom_customers/img.jpg')
 except:
-    st.image('\img.jpg')
+    st.image('/img.jpg')
 #st.image(image)
 st.title('Прогноз оттока клиентов')
 
