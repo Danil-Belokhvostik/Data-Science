@@ -1,0 +1,6 @@
+customerID,BeginDate,EndDate,Type,PaperlessBilling,PaymentMethod,MonthlyCharges,TotalCharges,InternetService,OnlineSecurity,OnlineBackup,DeviceProtection,TechSupport,StreamingTV,StreamingMovies,gender,SeniorCitizen,Partner,Dependents,MultipleLines
+Charles_Robert_Darwin,2018-03-01,No,One year,Yes,Bank transfer (automatic),68.75,1689.45,DSL,Yes,No,Yes,Yes,No,Yes,Female,0,Yes,No,No
+Albert_Einstein,2020-01-01,No,Month-to-month,Yes,Mailed check,44.95,44.95,DSL,No,No,No,No,No,No,Male,0,No,No,No
+Isaac_Newton,2015-04-01,2019-11-01 00:00:00,Month-to-month,Yes,Electronic check,98.8,5617.75,Fiber optic,Yes,No,No,No,Yes,Yes,Male,1,No,No,Yes
+Galileo_Galilei,2015-11-01,No,Two year,Yes,Mailed check,24.95,1222.25,,,,,,,,Male,0,Yes,Yes,Yes
+James_Clerk_Maxwell,2019-02-01,No,Month-to-month,No,Bank transfer (automatic),19.45,227.45,,,,,,,,Female,0,No,No,No
