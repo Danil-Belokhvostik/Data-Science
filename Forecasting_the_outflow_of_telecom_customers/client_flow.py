@@ -7,13 +7,14 @@ from PIL import Image
 
 # Добавление иконки сайта и изображения
 st.set_page_config(page_icon="🏧", page_title="Client_outflow")
-#image = Image.open('img.png')
-#uploaded_img = st.file_uploader("img",type="jpg")
-#st.open(uploaded_img)
-#img = Image.open("https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg")
-#st.image(img, width = 200 )
-st.image('https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg')
-
+# image = Image.open('img.png')
+# uploaded_img = st.file_uploader("img",type="jpg")
+# st.open(uploaded_img)
+# img = Image.open("https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg")
+# st.image(img, width = 200 )
+# st.image('https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg')
+image = Image.open('img.png')
+st.image(image)
 st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
