@@ -10,7 +10,9 @@ st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 #image = Image.open('img.png')
 #uploaded_img = st.file_uploader("img",type="jpg")
 #st.open(uploaded_img)
-st.image(r'img.png')
+img = Image.open("img.png")
+st.image(img, width = 200 )
+#st.image(r'img.png')
 
 st.title('Прогноз оттока клиентов')
 
