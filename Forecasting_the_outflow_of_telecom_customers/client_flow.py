@@ -46,7 +46,7 @@ def predict(df):
     try:
         joblib_cbc = joblib.load(joblib_file)
     except:
-        joblib_cbc = pickle.load(open(joblib_file, 'rb'))
+        joblib_cbc = pickle.load(open(joblib_file))
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(df_proc)
 
