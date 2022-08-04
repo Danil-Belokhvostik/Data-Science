@@ -12,16 +12,16 @@ st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 try:
     st.image('img.jpg')
 except:
-    st.image('/img.jpg')
+    st.image('Forecasting_the_outflow_of_telecom_customers/img.jpg')
 #st.image(image)
 st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
 try:
-    joblib_file = '/joblib_cbc.pkl'
+    joblib_file = 'Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
     #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
 except:
-    joblib_file = '/pickle_model.pkl'
+    joblib_file = 'Forecasting_the_outflow_of_telecom_customers/pickle_model.pkl'
     #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\pickle_model.pkl'
 
 #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
