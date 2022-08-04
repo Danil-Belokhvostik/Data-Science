@@ -20,7 +20,7 @@ st.title('Прогноз оттока клиентов')
 # Зададим название файла с параметрами модели
 # joblib_file = 'joblib_cbc.pkl'
 # joblib_file = "joblib_cbc.pkl"
-joblib_file = '/joblib_cbc.pkl'
+joblib_file = 'joblib_cbc.pkl'
 
 
 
@@ -49,8 +49,8 @@ if df is not None:
     test = proc.entire_graph(df, delete_features)
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
-    with open(joblib_file, 'rb') as f:
-        joblib_cbc = joblib.load(f)
+    
+    joblib_cbc = joblib.load(joblib_file)
 
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(test)
