@@ -51,7 +51,8 @@ if df is not None:
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
     uploaded_model = st.file_uploader(label='Выберите файл с моделью в формате - .pkl', type=['pkl'])
-    joblib_cbc = pickle.load(uploaded_model)
+    if uploaded_model is not None:
+        joblib_cbc = pickle.load(uploaded_model)
 
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(test)
