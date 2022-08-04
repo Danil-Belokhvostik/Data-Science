@@ -1,7 +1,7 @@
 import pandas as pd
 import streamlit as st
-import joblib
-#import pickle
+#import joblib
+import pickle
 from data_preprocessing import Processing
 from PIL import Image
 
