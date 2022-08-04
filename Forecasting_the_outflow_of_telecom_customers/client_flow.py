@@ -7,13 +7,13 @@ from PIL import Image
 
 # Добавление иконки сайта и изображения
 st.set_page_config(page_icon="🏧", page_title="Client_outflow")
-image = Image.open(r'img.png')
-st.image(image)
+#image = Image.open('img.png')
+st.image('img.png')
 st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
 # joblib_file = 'joblib_cbc.pkl'
-joblib_file = r'joblib_cbc.pkl'
+joblib_file = 'joblib_cbc.pkl'
 
 # Функция для загрузки данных
 def load_data():
