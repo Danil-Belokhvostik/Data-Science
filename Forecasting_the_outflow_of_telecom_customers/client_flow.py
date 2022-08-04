@@ -48,7 +48,7 @@ if df is not None:
     test = proc.entire_graph(df, delete_features)
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
-    joblib_cbc = joblib.load(open(joblib_file, 'rb'))
+    joblib_cbc = joblib.load(open(joblib_file))
 
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(test)
