@@ -1,16 +1,25 @@
 import pandas as pd
 import streamlit as st
 import joblib
+import pickle
 from data_preprocessing import Processing
 from PIL import Image
 
 st.set_page_config(page_icon="🏧", page_title="Client_outflow")
-#image = Image.open(r'c:\Users\Streamlit\Streamlit_client_flow\img.png')
+image = Image.open(r'c:\Users\Streamlit\Streamlit_client_flow\img.png')
 #st.image('https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg')
-st.image('img.jpg')
+#st.image('img.jpg')
+st.image(image)
 st.title('Прогноз оттока клиентов')
+
 # Зададим название файла с параметрами модели
-joblib_file = 'joblib_cbc.pkl'
+try:
+    joblib_file = 'joblib_cbc.pkl'
+    #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
+except:
+    joblib_file = 'pickle_model.pkl'
+    #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\pickle_model.pkl'
+
 #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
 
 
@@ -34,8 +43,10 @@ def predict(df):
     df_proc = proc.entire_graph(df, delete_features)
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
-    joblib_cbc = joblib.load(joblib_file)
-
+    try:
+        joblib_cbc = joblib.load(joblib_file)
+    except:
+        joblib_cbc = pickle.load(open(joblib_file, 'rb'))
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(df_proc)
 
@@ -69,7 +80,7 @@ if df is not None:
             st.markdown('- 1 - расторгнет договор')
             st.dataframe(results)
             if st.button('Скрыть результаты'):
-                st.dataframe(test)
+                st.dataframe(results)
 
         # Скачивание результатов
         csv = convert_df(results)
