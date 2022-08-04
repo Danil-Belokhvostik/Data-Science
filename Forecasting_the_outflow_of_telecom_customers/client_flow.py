@@ -18,7 +18,8 @@ st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
-joblib_file = 'Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
+# joblib_file = 'joblib_cbc.pkl'
+joblib_file = "joblib_cbc.pkl"
 # joblib_file = 'https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
 
 
@@ -48,7 +49,7 @@ if df is not None:
     test = proc.entire_graph(df, delete_features)
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
-    joblib_cbc = joblib.load(open(joblib_file))
+    joblib_cbc = joblib.load(joblib_file)
 
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(test)
