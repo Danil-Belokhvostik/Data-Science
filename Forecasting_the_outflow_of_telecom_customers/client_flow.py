@@ -1,29 +1,19 @@
+# Импорт библиотек
 import pandas as pd
 import streamlit as st
-#import joblib
 import pickle
 from data_preprocessing import Processing
 from PIL import Image
 
+# Зададим инконку сайта
 st.set_page_config(page_icon="🏧", page_title="Client_outflow")
-#image = Image.open(r'c:\Users\Streamlit\Streamlit_client_flow\img.png')
-#st.image('https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg')
-#
-#st.image('img.jpg')
+
+# Загрузим фоновое изображение и выведем название
 st.image('Forecasting_the_outflow_of_telecom_customers/img.jpg')
-#st.image(image)
 st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
-
-#joblib_file = 'Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
-#joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
-
 joblib_file = 'Forecasting_the_outflow_of_telecom_customers/pickle_model.pkl'
-#joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\pickle_model.pkl'
-
-#joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
-
 
 def load_data():
     uploaded_file = st.file_uploader(label='Выберите данные для классификации', type=['csv'])
@@ -33,7 +23,9 @@ def load_data():
     else:
         return None
 
+# Функция для создания предсказания
 def predict(df):
+    
     # Обработаем данные
     # Инициализируем объект класса Processing
     proc = Processing()
@@ -58,11 +50,12 @@ def predict(df):
 
 @st.cache
 def convert_df(results):
-     # IMPORTANT: Cache the conversion to prevent computation on every rerun
      return df.to_csv().encode('utf-8')
 
-
+# Загрузим данные
 df = load_data()
+
+# Настроим основные кнопки
 if df is not None:
     results, df_proc = predict(df)
 
