@@ -18,7 +18,7 @@ st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
-joblib_file = 'joblib_cbc.pkl'
+joblib_file = 'Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
 # joblib_file = 'https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/joblib_cbc.pkl'
 
 
