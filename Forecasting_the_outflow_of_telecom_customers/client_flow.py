@@ -1,7 +1,7 @@
 # Импорт библиотек
 import pandas as pd
 import streamlit as st
-#import joblib
+import joblib
 #import pickle
 from data_preprocessing import Processing
 from PIL import Image
@@ -52,7 +52,7 @@ if df is not None:
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
     uploaded_model = st.file_uploader(label='Выберите файл с моделью в формате - .pkl', type=['pkl'])
     if uploaded_model is not None:
-        joblib_cbc = pickle.load(uploaded_model)
+        joblib_cbc = joblib.load(uploaded_model)
 
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(test)
