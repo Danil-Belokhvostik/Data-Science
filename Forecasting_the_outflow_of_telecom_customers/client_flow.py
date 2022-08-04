@@ -50,7 +50,7 @@ if df is not None:
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
     
-    joblib_cbc = joblib.load(joblib_file)
+    joblib_cbc = joblib.load(open(joblib_file))
 
     # Сделаем предсказание
     joblib_cbc_predict = joblib_cbc.predict(test)
