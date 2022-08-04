@@ -1,8 +1,7 @@
 # Импорт библиотек
 import pandas as pd
 import streamlit as st
-#import joblib
-from sklearn.externals import joblib
+import joblib
 from data_preprocessing import Processing
 from PIL import Image
 
