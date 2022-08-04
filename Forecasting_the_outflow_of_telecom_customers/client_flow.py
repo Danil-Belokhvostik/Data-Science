@@ -8,7 +8,7 @@ from PIL import Image
 # Добавление иконки сайта и изображения
 st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 #image = Image.open('img.png')
-uplouploaded_imgaded_file = st.file_uploader("img",type="jpg")
+uploaded_img = st.file_uploader("img",type="jpg")
 st.open(uploaded_img)
 st.title('Прогноз оттока клиентов')
 
