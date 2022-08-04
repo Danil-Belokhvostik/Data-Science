@@ -1,31 +1,19 @@
-# Импорт библиотек
 import pandas as pd
 import streamlit as st
 import joblib
-#import pickle
 from data_preprocessing import Processing
 from PIL import Image
 
-# Добавление иконки сайта и изображения
 st.set_page_config(page_icon="🏧", page_title="Client_outflow")
-# image = Image.open('img.png')
-# uploaded_img = st.file_uploader("img",type="jpg")
-# st.open(uploaded_img)
-# img = Image.open("https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg")
-# st.image(img, width = 200 )
-# st.image('https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg')
-#image = Image.open('img.png')
-#st.image(image)
+#image = Image.open(r'c:\Users\Streamlit\Streamlit_client_flow\img.png')
+#st.image('https://github.com/Danil-Belokhvostik/Data-Science/blob/main/Forecasting_the_outflow_of_telecom_customers/img.jpg')
+st.image('img.jpg')
 st.title('Прогноз оттока клиентов')
-
 # Зададим название файла с параметрами модели
-# joblib_file = 'joblib_cbc.pkl'
-# joblib_file = "joblib_cbc.pkl"
-# joblib_file = 'joblib_cbc.pkl'
+joblib_file = 'joblib_cbc.pkl'
+#joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
 
 
-uploaded_model = st.file_uploader(label='Выберите файл с моделью в формате - .pkl', type=['pkl'])
-# Функция для загрузки данных
 def load_data():
     uploaded_file = st.file_uploader(label='Выберите данные для классификации', type=['csv'])
     if uploaded_file is not None:
@@ -34,11 +22,7 @@ def load_data():
     else:
         return None
 
-df = load_data()
-
-
-
-if df is not None:
+def predict(df):
     # Обработаем данные
     # Инициализируем объект класса Processing
     proc = Processing()
@@ -47,31 +31,51 @@ if df is not None:
     delete_features = ['begin_date', 'day', 'month', 'year', 'end_date', 'lifetime_m', 'total_charges']
 
     # Проведем обработку
-    test = proc.entire_graph(df, delete_features)
+    df_proc = proc.entire_graph(df, delete_features)
 
     # Загрузим параметры модели с помощью инструмента load библиотеки joblib
-    
-    if uploaded_model is not None:
-        joblib_cbc = joblib.load(uploaded_model)
+    joblib_cbc = joblib.load(joblib_file)
 
     # Сделаем предсказание
-    joblib_cbc_predict = joblib_cbc.predict(test)
+    joblib_cbc_predict = joblib_cbc.predict(df_proc)
 
-    # Добавим необходимые кнопки
-    if st.button('Отобразить данные до преобразования'):
-        st.dataframe(df)
-        if st.button('Скрыть данные'):
+    # Сформируем датафрейм с предсказаниями
+    results = pd.DataFrame({'result':joblib_cbc_predict}, index=df_proc.index)
+    return results, df_proc
+
+@st.cache
+def convert_df(results):
+     # IMPORTANT: Cache the conversion to prevent computation on every rerun
+     return df.to_csv().encode('utf-8')
+
+
+df = load_data()
+if df is not None:
+    results, df_proc = predict(df)
+
+    if results is not None:
+
+        if st.button('Отобразить данные до преобразования'):
             st.dataframe(df)
-    if st.button('Отобразить данные после преобразования'):
-        st.dataframe(test)
-        if st.button('Скрыть данные'):
-            st.dataframe(test)
-    if st.button('Показать результаты классфикации'):
-        st.markdown('# Результаты классификации')
-        st.markdown('- 0 - клиент останется')
-        st.markdown('- 1 - расторгнет договор')
-        results = pd.DataFrame({'result':joblib_cbc_predict}, index=test.index)
-        st.dataframe(results)
-        if st.button('Скрыть результаты'):
-            st.dataframe(test)
+            if st.button('Скрыть данные'):
+                st.dataframe(df)
+        if st.button('Отобразить данные после преобразования'):
+            st.dataframe(df_proc)
+            if st.button('Скрыть данные'):
+                st.dataframe(df_proc)
+        if st.button('Показать результаты классфикации'):
+            st.markdown('# Результаты классификации')
+            st.markdown('- 0 - клиент останется')
+            st.markdown('- 1 - расторгнет договор')
+            st.dataframe(results)
+            if st.button('Скрыть результаты'):
+                st.dataframe(test)
+
+        # Скачивание результатов
+        csv = convert_df(results)
+        st.download_button(
+            label="Скачать результаты классификации",
+            data=csv,
+            file_name='Результаты классфикации.csv',
+            mime='text/csv')
 
