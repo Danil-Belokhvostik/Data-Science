@@ -18,10 +18,10 @@ st.title('Прогноз оттока клиентов')
 
 # Зададим название файла с параметрами модели
 try:
-    joblib_file = 'joblib_cbc.pkl'
+    joblib_file = '/joblib_cbc.pkl'
     #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
 except:
-    joblib_file = 'pickle_model.pkl'
+    joblib_file = '/pickle_model.pkl'
     #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\pickle_model.pkl'
 
 #joblib_file = r'c:\Users\Streamlit\Streamlit_client_flow\joblib_cbc.pkl'
