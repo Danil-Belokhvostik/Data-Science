@@ -4,7 +4,6 @@ import streamlit as st
 import pickle
 from data_preprocessing import Processing
 from PIL import Image
-import catboost
 
 st.set_page_config(page_icon="🏧", page_title="Client_outflow")
 #image = Image.open(r'c:\Users\Streamlit\Streamlit_client_flow\img.png')
