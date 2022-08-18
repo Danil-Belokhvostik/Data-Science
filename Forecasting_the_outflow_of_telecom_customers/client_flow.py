@@ -95,4 +95,4 @@ if df is not None:
             mime='text/csv')
 else:
     st.error("Скачать пример исходного файла можно по ссылке"
-             "(https://docs.google.com/spreadsheets/d/1xyehA7KBtY3Acb9W9KNLaQUCMQDyZrQXNPivtv92z28/edit?usp=sharing)")
+             "(https://clck.ru/sdPMe)")
