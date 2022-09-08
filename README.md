@@ -34,7 +34,7 @@
 
 ## Прогноз оттока клиентов оператора связи
 
-В проекте осуществляется прогноз оттокка клиентов оператора связи с реализацией web-интерфейса
+В проекте осуществляется прогноз оттокка клиентов оператора связи с реализацией [web-интерфейса](https://forecasting-the-outflow-of-telecom-customersclient-flo-7wjae1.streamlitapp.com/)
 <br>`numpy` `matplotlib` `pandas` `re` `seaborn` `scikit-learn` `catboost`
 
 ## Прогнозирование заказов такси
