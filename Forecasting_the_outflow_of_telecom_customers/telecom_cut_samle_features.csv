@@ -4,3 +4,18 @@ Albert_Einstein,2020-01-01,No,Month-to-month,Yes,Mailed check,44.95,44.95,DSL,No
 Isaac_Newton,2015-04-01,2019-11-01 00:00:00,Month-to-month,Yes,Electronic check,98.8,5617.75,Fiber optic,Yes,No,No,No,Yes,Yes,Male,1,No,No,Yes
 Galileo_Galilei,2015-11-01,No,Two year,Yes,Mailed check,24.95,1222.25,,,,,,,,Male,0,Yes,Yes,Yes
 James_Clerk_Maxwell,2019-02-01,No,Month-to-month,No,Bank transfer (automatic),19.45,227.45,,,,,,,,Female,0,No,No,No
+Andy_Warhol,2019-02-01,No,Month-to-month,No,Bank transfer (automatic),19.45,227.45,,,,,,,,Female,0,No,No,No
+Pablo Picasso,2014-05-01,No,Month-to-month,Yes,Bank transfer (automatic),85.4,5869.4,Fiber optic,No,Yes,Yes,No,No,No,Female,0,Yes,No,Yes
+Vincent Van Gogh,2017-12-01,2019-12-01 00:00:00,Month-to-month,Yes,Electronic check,104.25,2433.9,Fiber optic,No,Yes,Yes,No,Yes,Yes,Male,1,Yes,No,Yes
+Leonardo da Vinci,2019-09-01,No,Month-to-month,Yes,Mailed check,24.3,132.25,,,,,,,,Female,0,Yes,Yes,Yes
+Michelangelo,2014-07-01,No,Two year,No,Credit card (automatic),70.9,4677.1,DSL,Yes,Yes,Yes,Yes,No,No,Male,0,Yes,No,Yes
+Henri Matisse,2019-05-01,No,Month-to-month,Yes,Mailed check,70.05,564.4,DSL,No,No,Yes,No,Yes,Yes,Male,0,Yes,No,No
+Jackson Pollock,2019-11-01,2019-12-01 00:00:00,Month-to-month,Yes,Electronic check,79.2,79.2,Fiber optic,No,No,No,No,Yes,No,Female,1,No,No,No
+Edvard Munch,2014-03-01,No,Month-to-month,Yes,Bank transfer (automatic),52.3,3765.05,DSL,No,Yes,Yes,No,Yes,Yes,Male,1,Yes,No,
+Claude Monet,2015-01-01,No,Two year,Yes,Bank transfer (automatic),73.8,4616.05,DSL,No,No,Yes,Yes,Yes,Yes,Female,0,Yes,Yes,No
+Rene Magritte,2019-09-01,2019-10-01 00:00:00,Month-to-month,Yes,Mailed check,69.9,69.9,Fiber optic,No,No,No,No,No,No,Male,0,Yes,Yes,No
+Salvador Dal?,2014-03-01,No,Two year,Yes,Bank transfer (automatic),80.45,5662.25,DSL,No,No,Yes,Yes,Yes,Yes,Female,0,Yes,No,Yes
+Edward Hopper,2018-06-01,No,Month-to-month,Yes,Bank transfer (automatic),69.8,1540.35,Fiber optic,No,No,No,No,No,No,Female,0,Yes,No,No
+Frida Kahlo,2018-12-01,No,Two year,Yes,Bank transfer (automatic),61.4,815.55,DSL,Yes,Yes,No,No,No,Yes,Male,0,Yes,Yes,No
+Yayoi Kusama,2014-02-01,No,Two year,No,Credit card (automatic),19.7,1379.8,,,,,,,,Female,0,Yes,Yes,No
+Sandro Botticelli,2014-11-01,2019-12-01 00:00:00,Month-to-month,Yes,Mailed check,19.4,1182.55,,,,,,,,Female,0,Yes,Yes,No
