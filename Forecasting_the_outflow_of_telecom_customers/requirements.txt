@@ -5,3 +5,5 @@ Pillow
 streamlit
 data_preprocessing
 catboost
+seaborn
+matplotlib
